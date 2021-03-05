@@ -1,6 +1,7 @@
 -- full credits to dawid for the official thing ofc
+-- edited and fixed by forEach#6969
 if game.CoreGui:FindFirstChild("FluxLib") then
-  game.CoreGui:FindFirstChild("FluxLib"):Destroy()
+	game.CoreGui:FindFirstChild("FluxLib"):Destroy()
 end
 
 local Flux = {RainbowColorValue = 0, HueSelectionPosition = 0}
@@ -211,7 +212,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 		end
 	)
 	
-	function Flux:Notification(desc,buttontitle)
+	function Flux:Notification(mainTtl,desc,buttontitle)
 		for i, v in next, MainFrame:GetChildren() do
 			if v.Name == "NotificationBase" then
 				v:Destroy()
@@ -275,7 +276,7 @@ function Flux:Window(text, bottom,mainclr,toclose)
 		NotificationTitle.Position = UDim2.new(0.0400609747, 0, 0.0761325806, 0)
 		NotificationTitle.Size = UDim2.new(0, 111, 0, 34)
 		NotificationTitle.Font = Enum.Font.GothamBold
-		NotificationTitle.Text = Title.Text .. " | NOTIFICATION"
+		NotificationTitle.Text = Title.Text .. " | "..mainTtl
 		NotificationTitle.TextColor3 = Color3.fromRGB(255, 255, 255)
 		NotificationTitle.TextSize = 24.000
 		NotificationTitle.TextXAlignment = Enum.TextXAlignment.Left
