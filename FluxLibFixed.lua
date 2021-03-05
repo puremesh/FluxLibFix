@@ -1,3 +1,4 @@
+-- full credits to dawid for the official thing ofc
 if game.CoreGui:FindFirstChild("FluxLib") then
   game.CoreGui:FindFirstChild("FluxLib"):Destroy()
 end
